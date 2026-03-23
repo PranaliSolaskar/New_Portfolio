@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranalee Solaskar | Full Stack Developer (3 Years)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* ORIGINAL TECH BACKGROUND - restored exactly as in your profile image */
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)), 
+                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(14,165,233,0.08) 10px,
+                rgba(14,165,233,0.08) 20px
+            );
+            animation: codeMove 25s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes codeMove { 0% { transform: translate(0,0); } 100% { transform: translate(30px,30px); } }
+        
+        .linkedin-btn { background: linear-gradient(90deg, #0a66c2, #0077b5); }
+        .section-title::after { content: ''; position: absolute; width: 70px; height: 4px; background: linear-gradient(to right, #0ea5e9, #22d3ee); bottom: -10px; left: 0; }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #0ea5e9; transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+        #toast { 
+            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); 
+            background: #10b981; color: white; padding: 16px 24px; border-radius: 9999px; 
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3); display: none; align-items: center; 
+            gap: 12px; z-index: 9999; font-weight: 600; 
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full z-50 bg-zinc-950/95 backdrop-blur-2xl border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-sky-500 rounded-2xl flex items-center justify-center text-2xl font-bold">PS</div>
+                <span class="text-2xl font-semibold tracking-tighter">Pranalee Solaskar</span>
+            </div>
+            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+                <a href="#home" class="nav-link text-zinc-300 hover:text-white">Home</a>
+                <a href="#about" class="nav-link text-zinc-300 hover:text-white">About</a>
+                <a href="#skills" class="nav-link text-zinc-300 hover:text-white">Skills</a>
+                <a href="#experience" class="nav-link text-zinc-300 hover:text-white">Experience</a>
+                <a href="#projects" class="nav-link text-zinc-300 hover:text-white">Projects</a>
+                <a href="#contact" class="nav-link text-zinc-300 hover:text-white">Contact</a>
+            </div>
+            <a href="Pranalee_Solaskar_CV.pdf" download="Pranalee_Solaskar_CV.pdf" class="flex items-center gap-2 px-5 py-3 bg-emerald-500 hover:bg-emerald-600 rounded-2xl font-semibold text-sm transition-all">
+                <i class="fas fa-download"></i> DOWNLOAD CV
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO - Tech background restored + typing effect restored -->
+    <section id="home" class="hero-bg min-h-screen flex items-center relative">
+        <div class="max-w-7xl mx-auto px-6 pt-24 pb-20 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-2 rounded-3xl text-sm border border-white/20">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="font-medium tracking-wider">3 YEARS • OPEN TO OPPORTUNITIES</span>
+                </div>
+                
+                <h1 class="text-7xl md:text-8xl font-bold tracking-tighter leading-none">PRANALEE<br>SOLASKAR</h1>
+                
+                <!-- TYPING EFFECT RESTORED -->
+                <div id="typing" class="text-3xl md:text-4xl font-medium text-sky-400 h-12"></div>
+                
+                <p class="max-w-md text-xl text-zinc-300">Full Stack Developer with 3+ years building scalable web applications using React, Node.js, Python & AWS.</p>
+                
+                <a href="https://www.linkedin.com/in/pranaleesolaskar/" target="_blank" rel="noopener noreferrer"
+                   class="linkedin-btn px-10 py-5 rounded-3xl font-semibold text-lg flex items-center gap-3 group text-white shadow-xl hover:shadow-2xl transition-all inline-flex">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                    CONNECT ON LINKEDIN
+                    <i class="fas fa-arrow-right group-active:rotate-45 transition-transform"></i>
+                </a>
+            </div>
+            
+            <!-- Right side container (kept as you liked) -->
+            <div class="hidden md:flex justify-end relative">
+                <div class="w-96 h-96 bg-gradient-to-br from-sky-500/10 to-transparent rounded-[6rem] backdrop-blur-3xl border border-white/10 p-8 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-8xl mb-6">🚀</div>
+                        <div class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-cyan-300 tracking-tighter">
+                            3 YEARS<br>OF EXCELLENCE
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-zinc-900">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="section-title text-5xl font-semibold mb-12">About Me</h2>
+            <div class="grid md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-7 text-xl leading-relaxed text-zinc-300">
+                    <p class="mb-8">Full Stack Developer with nearly <span class="text-sky-400 font-semibold">3 years</span> of experience building scalable web applications using React.js, Node.js, and Python. Skilled in microservices architecture, REST APIs, and cloud deployment (AWS). Strong focus on performance optimization, secure authentication (OAuth2, SSO), Authorization and delivering high-quality solutions in Agile environments.</p>
+                </div>
+                <div class="md:col-span-5 bg-zinc-950 border border-white/10 rounded-3xl p-10">
+                    <div class="space-y-8 text-sm">
+                        <div class="flex justify-between"><span class="text-zinc-400">Location</span><span>Pune, Maharashtra</span></div>
+                        <div class="h-px bg-white/10"></div>
+                        <div class="flex justify-between"><span class="text-zinc-400">Email</span><a href="mailto:pranaleesolaskar@gmail.com" class="text-sky-400">pranaleesolaskar@gmail.com</a></div>
+                        <div class="h-px bg-white/10"></div>
+                        <div class="flex justify-between"><span class="text-zinc-400">Phone</span><a href="tel:+919130107486" class="text-sky-400">+91 91301 07486</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="section-title text-5xl font-semibold mb-12">Skills & Expertise</h2>
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="space-y-10">
+                    <div><div class="flex justify-between mb-3"><span class="font-medium">React.js + TypeScript</span><span class="text-emerald-400">Advanced • 3+ yrs</span></div><div class="h-2 bg-zinc-800 rounded-full"><div class="skill-bar h-2 bg-gradient-to-r from-sky-400 to-cyan-300 rounded-full w-[95%]"></div></div></div>
+                    <div><div class="flex justify-between mb-3"><span class="font-medium">Node.js + REST APIs</span><span class="text-emerald-400">Advanced • 3+ yrs</span></div><div class="h-2 bg-zinc-800 rounded-full"><div class="skill-bar h-2 bg-gradient-to-r from-sky-400 to-cyan-300 rounded-full w-[93%]"></div></div></div>
+                    <div><div class="flex justify-between mb-3"><span class="font-medium">Python & Automation</span><span class="text-emerald-400">Intermediate • 1.5 yrs</span></div><div class="h-2 bg-zinc-800 rounded-full"><div class="skill-bar h-2 bg-gradient-to-r from-sky-400 to-cyan-300 rounded-full w-[50%]"></div></div></div>
+                    <div><div class="flex justify-between mb-3"><span class="font-medium">AWS (Lambda, API Gateway)</span><span class="text-emerald-400">Strong • 2 yrs</span></div><div class="h-2 bg-zinc-800 rounded-full"><div class="skill-bar h-2 bg-gradient-to-r from-sky-400 to-cyan-300 rounded-full w-[75%]"></div></div></div>
+                    <div><div class="flex justify-between mb-3"><span class="font-medium">Angular + C#/.NET</span><span class="text-emerald-400">Strong • 2 yrs</span></div><div class="h-2 bg-zinc-800 rounded-full"><div class="skill-bar h-2 bg-gradient-to-r from-sky-400 to-cyan-300 rounded-full w-[80%]"></div></div></div>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-zinc-900 p-6 rounded-3xl text-center">MongoDB</div>
+                    <div class="bg-zinc-900 p-6 rounded-3xl text-center">MySQL</div>
+                    <div class="bg-zinc-900 p-6 rounded-3xl text-center">Docker</div>
+                    <div class="bg-zinc-900 p-6 rounded-3xl text-center">Highcharts</div>
+                    <div class="bg-zinc-900 p-6 rounded-3xl text-center">OAuth2 • SSO</div>
+                    <div class="bg-zinc-900 p-6 rounded-3xl text-center">Git • JIRA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-24 bg-zinc-900">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="section-title text-5xl font-semibold mb-16">Experience</h2>
+            <div class="flex gap-8">
+                <div class="w-36 text-right shrink-0">
+                    <div class="text-sm font-medium text-zinc-400">Nov 2023 – Present</div>
+                    <div class="text-emerald-400 text-sm">2.5+ years</div>
+                </div>
+                <div class="relative pl-8 border-l border-white/10">
+                    <div class="timeline-dot absolute -left-2 top-2 rounded-full"></div>
+                    <div>
+                        <div class="font-semibold text-2xl">Software Engineer</div>
+                        <div class="text-sky-400">Reval Analytical Services Pvt. Ltd – Pune</div>
+                        <ul class="mt-8 space-y-5 text-zinc-300">
+                            <li class="flex gap-4"><span class="text-emerald-400">•</span> Designed and developed scalable full-stack applications using React.js, Node.js, and Python</li>
+                            <li class="flex gap-4"><span class="text-emerald-400">•</span> Built and optimized RESTful APIs and microservices architecture</li>
+                            <li class="flex gap-4"><span class="text-emerald-400">•</span> Performed database optimization on MongoDB and MySQL (30% faster queries)</li>
+                            <li class="flex gap-4"><span class="text-emerald-400">•</span> Developed interactive dashboards using Highcharts and SpreadJS</li>
+                            <li class="flex gap-4"><span class="text-emerald-400">•</span> Implemented secure authentication (SSO, OAuth2)</li>
+                            <li class="flex gap-4"><span class="text-emerald-400">•</span> Deployed applications on AWS (Lambda, API Gateway)</li>
+                            <li class="flex gap-4"><span class="text-emerald-400">•</span> Automated workflows using Python scripting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="section-title text-5xl font-semibold mb-12">Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-zinc-900 rounded-3xl p-10 hover:-translate-y-2 transition-all">
+                    <div class="text-sky-400 text-sm mb-2">INTERNAL TOOL • 2024</div>
+                    <div class="text-3xl font-semibold mb-6">IAC Refresh</div>
+                    <ul class="space-y-5 text-zinc-300">
+                        <li class="flex gap-3"><span class="text-emerald-400 text-xl">→</span> Reduced backend processing time from 10 minutes to 2–3 minutes (~70% improvement)</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 text-xl">→</span> Implemented asynchronous processing and optimized data handling</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 text-xl">→</span> Built responsive UI using React.js</li>
+                    </ul>
+                </div>
+                <div class="bg-zinc-900 rounded-3xl p-10 hover:-translate-y-2 transition-all">
+                    <div class="text-sky-400 text-sm mb-2">SYSTEM UPGRADE • 2024</div>
+                    <div class="text-3xl font-semibold mb-6">Version Upgrade Project</div>
+                    <ul class="space-y-5 text-zinc-300">
+                        <li class="flex gap-3"><span class="text-emerald-400 text-xl">→</span> Led system upgrade with zero downtime deployment</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 text-xl">→</span> Integrated C# backend with Angular frontend</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 text-xl">→</span> Enhanced security and performance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & ACHIEVEMENTS -->
+    <section class="py-24 bg-zinc-900">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+            <div>
+                <h2 class="section-title text-4xl font-semibold mb-10">Education</h2>
+                <div class="space-y-12">
+                    <div><div class="text-emerald-400">Master of Computer Application</div><div class="text-2xl font-medium">GPA: 73.10% • 08/2023</div></div>
+                    <div><div class="text-emerald-400">Bachelor of Computer Application</div><div class="text-2xl font-medium">GPA: 73.43% • 10/2020</div></div>
+                </div>
+            </div>
+            <div>
+                <h2 class="section-title text-4xl font-semibold mb-10">Achievements</h2>
+                <div class="bg-zinc-950 border border-white/10 rounded-3xl p-10">
+                    <div class="flex gap-6">
+                        <div class="text-6xl">🏆</div>
+                        <div><div class="font-semibold text-2xl">Certificate of Outstanding Contribution</div><div class="text-zinc-400 mt-3">Awarded by Reval Analytical Services Pvt. Ltd for exceptional performance in the Development Team.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-black">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-6xl font-semibold mb-6">Let's connect and build something great</h2>
+            <div class="mt-16 flex flex-col md:flex-row gap-6 justify-center">
+                <button onclick="copyContact('email')" class="flex-1 max-w-xs py-8 bg-white text-zinc-950 rounded-3xl text-2xl font-semibold flex items-center justify-center gap-4">
+                    <i class="fas fa-envelope"></i> EMAIL ME
+                </button>
+                <button onclick="copyContact('phone')" class="flex-1 max-w-xs py-8 border border-white/30 rounded-3xl text-2xl font-semibold flex items-center justify-center gap-4">
+                    <i class="fas fa-phone"></i> CALL ME
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM TOAST -->
+    <div id="toast" class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 bg-emerald-500 text-white px-6 py-3 rounded-3xl flex items-center gap-3 shadow-2xl">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-text"></span>
+    </div>
+
+    <footer class="py-8 text-center text-xs text-zinc-500 border-t border-white/10">© 2026 Pranalee Solaskar • Full Stack Developer</footer>
+
+    <script>
+        // Typing effect restored
+        function typeEffect() {
+            const texts = ["Full Stack Developer", "React • Node.js • Python", "AWS & Microservices Expert"];
+            let count = 0, index = 0, current = '', direction = 1;
+            const el = document.getElementById('typing');
+            setInterval(() => {
+                current = texts[count].substring(0, index);
+                el.textContent = current;
+                if (direction === 1) {
+                    index++;
+                    if (index > texts[count].length) { direction = -1; setTimeout(() => {}, 1500); }
+                } else {
+                    index--;
+                    if (index < 0) { direction = 1; count = (count + 1) % texts.length; index = 0; }
+                }
+            }, 80);
+        }
+
+        function copyContact(type) {
+            let text = type === 'email' ? 'pranaleesolaskar@gmail.com' : '+91 9130107486';
+            let message = type === 'email' ? 'Email copied: pranaleesolaskar@gmail.com' : 'Phone copied: +91 9130107486';
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('toast');
+                document.getElementById('toast-text').textContent = message;
+                toast.classList.remove('hidden');
+                toast.style.display = 'flex';
+                setTimeout(() => toast.style.display = 'none', 4000);
+            });
+        }
+
+        window.onload = () => {
+            typeEffect();
+        };
+    </script>
+</body>
+</html>
